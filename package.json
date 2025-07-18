@@ -1,0 +1,43 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "React project with Parcel, Tailwind, Redux Toolkit, and Testing",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.27.6",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^6.22.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-runtime": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@parcel/transformer-react-refresh-wrap": "^2.15.4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "autoprefixer": "^10.4.21",
+    "babel-jest": "^30.0.4",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
+    "parcel": "^2.15.4",
+    "postcss": "^8.5.3",
+    "process": "^0.11.10",
+    "react-refresh": "^0.17.0",
+    "tailwindcss": "^4.1.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not < 0.2%"
+  ]
+}

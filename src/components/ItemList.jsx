@@ -1,0 +1,41 @@
+import React from 'react';
+import { CDN_URL } from '../utils/constants';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../utils/cartSlice';
+
+export default function ItemList({ items }) {
+  const dispatch = useDispatch();
+
+  const handleAdditem = (item) => {
+    dispatch(addItem(item));
+  };
+
+  return (
+    <div>
+      {items.map((item) => (
+        <div key={item.card.info.id} className='p-2 m-2 border-gray-200 border-b-2 text-left justify-between flex'>
+          <div className='w-9/12'>
+            <div className='py-2'>
+              <span>{item.card.info.name} - </span>
+              <span>
+                ₹{item.card.info.price != null ? item.card.info.price / 100 : item.card.info.defaultPrice / 100}
+              </span>
+            </div>
+            <p className='text-xs'>{item.card.info.description}</p>
+          </div>
+          <div className='w-3/12 p-4 relative'>
+            <img className='rounded-lg' src={CDN_URL + item.card.info.imageId} alt={item.card.info.name} />
+            <div className="absolute bottom-0 left-0 right-0">
+              <button
+                className='p-2 bg-white rounded-b-lg shadow-lg m-auto block'
+                onClick={() => handleAdditem(item)}
+              >
+                Add +
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
